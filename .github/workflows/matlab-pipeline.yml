@@ -39,11 +39,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
-      - run: cd simulations
       - name: Run Simulations
         uses: matlab-actions/run-command@v2
         with:
-          command: sunEarthMoonSimulation
+          command: |
+            cd simulations
+            sunEarthMoonSimulation
       - name: Upload sunEarthMoon simulation artifacts
         uses: actions/upload-artifact@v4
         with:
