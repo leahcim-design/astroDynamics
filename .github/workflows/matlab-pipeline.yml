@@ -40,6 +40,7 @@ jobs:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
       - name: Run Simulations
+        run: cd simulations
         uses: matlab-actions/run-command@v2
         with:
           command: simulations/sunEarthMoonSimulation
