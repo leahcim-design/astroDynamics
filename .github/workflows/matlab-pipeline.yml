@@ -27,4 +27,6 @@ jobs:
           path: artifacts/coverage.xml
       - name: Upload pdf report
         uses: actions/upload-artifact@v4
-        path: artifacts/testReport.pdf
+        with:
+            name: pdf-Report
+            path: artifacts/testReport.pdf
