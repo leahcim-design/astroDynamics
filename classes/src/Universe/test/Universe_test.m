@@ -1,4 +1,4 @@
-classdef (TestTags = {'MatlabUnitTest'}) Universe_test < sltest.TestCase
+classdef (TestTags = {'MatlabUnitTest'}) Universe_test < matlab.unittest.TestCase
     %UNIVERSE_TEST 
     
     properties (Constant)

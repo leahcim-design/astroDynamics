@@ -1,4 +1,4 @@
-classdef (TestTags = {'MatlabUnitTest'}) SphericalMassDynamics_test < sltest.TestCase
+classdef (TestTags = {'MatlabUnitTest'}) SphericalMassDynamics_test < matlab.unittest.TestCase
     %SPHERICALMASSDYNAMICS_TEST   
     
     properties (Constant)

@@ -1,4 +1,4 @@
-classdef UniverseSimulationIntegration_test < sltest.TestCase
+classdef UniverseSimulationIntegration_test < matlab.unittest.TestCase
     %UNIVERSESIMULATIONINTEGRATION_TEST 
     
     properties (SetAccess = private)

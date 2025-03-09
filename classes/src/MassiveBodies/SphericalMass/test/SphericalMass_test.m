@@ -1,4 +1,4 @@
-classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < sltest.TestCase
+classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < matlab.unittest.TestCase
     %SPHERICALMASS_TEST
     % checks all the basic functions of the SphericalMass class
     

@@ -1,4 +1,4 @@
-classdef SphericalMassOperatorOverload_test < sltest.TestCase
+classdef SphericalMassOperatorOverload_test < matlab.unittest.TestCase
     %SPHERICALMASSOPERATOROVERLOAD_TEST 
     
     properties (Constant)
