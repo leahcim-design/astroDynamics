@@ -15,12 +15,12 @@ jobs:
           test-results-junit: artifacts/results.xml
           code-coverage-cobertura: artifacts/coverage.xml
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: artifacts/results.xml
       - name: Upload code coverage
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: code-coverage
           path: artifacts/coverage.xml
