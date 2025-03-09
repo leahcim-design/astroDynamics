@@ -14,6 +14,7 @@ jobs:
         with:
           test-results-junit: artifacts/results.xml
           code-coverage-cobertura: artifacts/coverage.xml
+          test-results-pdf: artifacts/testReport.pdf
       - name: Upload test results
         uses: actions/upload-artifact@v4
         with:
@@ -24,3 +25,6 @@ jobs:
         with:
           name: code-coverage
           path: artifacts/coverage.xml
+      - name: Upload pdf report
+        uses: actions/upload-artifact@v4
+        path: artifacts/testReport.pdf
