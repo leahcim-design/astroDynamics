@@ -1,6 +1,16 @@
 # astroDynamics
 
 
+## What is this project about?
+This project is a simulation framework to simulate the celestial dynamic of suns, planets, moons and asteroids. 
+The existing classes are designed to make them easy to use and easy to add further functionality, e.g. bodies with internal structure or deformable bodys to properly simulate tidal effects.
+
+The current project does not include any relativistic effects, it only uses Newton's gravitational law (https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation). 
+
+## Explanation of the Architecture
+A UML class diagramm can be found in the docs folder. 
+
+### MassiveBodyInterface
 
 ## Getting started
 

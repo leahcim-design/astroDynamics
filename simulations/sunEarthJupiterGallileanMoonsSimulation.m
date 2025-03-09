@@ -1,6 +1,6 @@
 
-% this script simulates the movement of the sun, jupiter and its Gallilean
-% moons
+% this script simulates the movement of the sun,earth jupiter and its 
+% Gallilean moons over the course of one earth-year
 % note that the gravitational constant is set to 1! hence the mass-unit
 % must be adjusted when setting the simulation-parameters
 % all other simulation parameters use SI-units!
