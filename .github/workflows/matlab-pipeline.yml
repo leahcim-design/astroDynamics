@@ -43,7 +43,7 @@ jobs:
         run: cd simulations
         uses: matlab-actions/run-command@v2
         with:
-          command: simulations/sunEarthMoonSimulation
+          command: sunEarthMoonSimulation
       - name: Upload sunEarthMoon simulation artifacts
         uses: actions/upload-artifact@v4
         with:
