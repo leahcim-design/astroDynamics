@@ -8,96 +8,34 @@ The existing classes are designed to make them easy to use and easy to add furth
 The current project does not include any relativistic effects, it only uses Newton's gravitational law (https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation). 
 
 ## Explanation of the Architecture
-A UML class diagramm can be found in the docs folder. 
+All classes that represent celestial bodies with mass must inherit from the MassiveBodyInterface. Additionally, there must be a class to store changes in the dynamic properties for every massive body that inherits from the MassiveBodyDeltaInterface class. If these rules are followed, instances of different MassiveBody-classes can be used to form one Universe, which is a class that combines multiple massive bodies. The UniverseSimulation class is used to time-propagate a universe. 
+In the following, a short explanation of the different classes is given.
 
 ### MassiveBodyInterface
+This is an abstract class that represents the basis for all celestial bodies with mass. All classes that represent a massive body must inherit from this interface.
 
-## Getting started
+### MassiveBodyDeltaInterface
+This is an abstract class that represents the basic structure of a data-container to store the change of the dynamic properties of the corresponding massive body. For example, this would be the change in the center-of-mass position and the change in the center-of-mass velocity in the case of a point-mass like body. More complex bodies with internal structure could also have additional dynamic property-changes like angle-change gier-rate-change. 
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### MassiveSphere
+This class inherits from the MassiveBodyInterface. It represents a model of a spherical body. The radius, mass, density and the generated force-density are those of a mass sphere. The time-propagation is calculated as if the whole mass where centered in the center-of-mass in order to speed up calculations. In that sense this is a combination of an actual mass sphere and a point mass.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### MassiveSphereDelta
+This class inherits from the MassiveBodyDeltaInterface. It is the container for changes in the position and velocity of MassiveSphere objects.
 
-## Add your files
+### Universe
+The Universe class is a container for multiple MassiveBody classes. It also provides a runge-kutta-4 time propagator and a plotting method. 
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### UniverseSimulation
+The UniverseSimulation class can time-propagate a Universe-instance and hold the generated time-slices in memory. It also provides different plotting methods, for example to plot the orbital curves of its massive bodies. 
 
-```
-cd existing_repo
-git remote add origin https://gitlab.internal.d-fine.dev/d50057/astrodynamics.git
-git branch -M main
-git push -uf origin main
-```
+## CI/CD
+This project contains a pipeline for GitHub in the folder .github/workflows. As there is no direct Matlab support on GitLab it was decided to mirror the project into a public repository in GitHub to use its Matlab-support. The pipeline.runs can be found here: https://github.com/leahcim-design/astroDynamics/actions/workflows/matlab-pipeline.yml .
 
-## Integrate with your tools
+The pipeline runs all Matlab-tests. All files that bear the "test" label count as test for the pipeline. The results of the test-stage are published as artifacts. For convenience the result of the latest run are checked into this repository in the folder "artifactsFromGithub".
+Additionally the pipeline has a simulation stage that can execute simulations and publish the generated outputs as artifacts. For convenience the results of the latest runf are checked into this repo in the "simulations/sinulationResults" folder. 
 
-- [ ] [Set up project integrations](https://gitlab.internal.d-fine.dev/d50057/astrodynamics/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## simulations
+This project includes simulations of celestial bodis of our solar system. 
+- sunEarthMoonSimulation: this is a simulation of the Sun, Earth and the earth Moon over the course of one earth-year
+- sunEarthJupiterGallileanMoonsSimulation: this is a simulation of the Sun, Earth, Jupiter and the Gallilean moons Io, Ganymede, Kallisto and Europa over the course of one earth-year
