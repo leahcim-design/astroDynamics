@@ -12,7 +12,7 @@ gravSI = 6.6743*10^-11; %gravitational constant
 %time-step dT and end-time of the simulation
 dT = 1 * 60 * 60; 
 startTime = 0;
-endTime = 2 * 365 * 24 * 60 * 60 ;
+endTime = 1 * 365 * 24 * 60 * 60 ;
 
 %add sun
 iniPosXsun = 0;

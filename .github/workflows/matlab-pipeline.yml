@@ -45,10 +45,10 @@ jobs:
           command: |
             openProject('AstroDynamics.prj');
             cd simulations
-            sunEarthMoonSimulation
-      - name: Upload sunEarthMoon simulation artifacts
+            sunEarthMoonSimulation, sunEarthMoonJupiterIoSimulation
+      - name: Upload simulation artifacts
         uses: actions/upload-artifact@v4
         with:
-            name: sunEarthMoon
+            name: simulation-results
             overwrite: true
             path: simulations/simulationResults/

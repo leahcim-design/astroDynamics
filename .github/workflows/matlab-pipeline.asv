@@ -31,4 +31,22 @@ jobs:
             name: pdf-Report
             path: artifacts/testReport.pdf
 
-    
+  simulation-stage:  
+    name: Run MATLAB Simulations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+      - run: cd simulations
+      - name: Run Simulations
+        uses: matlab-actions/run-command@v2
+        with:
+          command: sunEarthMoonSimulation
+      - name: Upload sunEarthMoon simulation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+            name: sunEarthMoon
+            overwrite: true
+            path: simulations/simulationResults/
