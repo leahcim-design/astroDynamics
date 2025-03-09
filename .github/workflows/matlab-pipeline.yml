@@ -43,6 +43,7 @@ jobs:
         uses: matlab-actions/run-command@v2
         with:
           command: |
+            openProject('AstroDynamics.prj');
             cd simulations
             sunEarthMoonSimulation
       - name: Upload sunEarthMoon simulation artifacts
