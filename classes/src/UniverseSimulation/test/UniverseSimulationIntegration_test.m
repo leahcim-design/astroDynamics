@@ -47,7 +47,7 @@ classdef UniverseSimulationIntegration_test < matlab.unittest.TestCase
             massSphere2 = SphericalMass(iniPosX2, iniPosY2, iniVelX2, iniVelY2, mass2, density);
 
             %expected radii of the curves
-            expRadius1 = 5 * r / 3;
+            expRadius1 = 2 * r / 3;
             expRadius2 = r / 3;
 
             myUniverse = Universe(massSphere1, massSphere2);
