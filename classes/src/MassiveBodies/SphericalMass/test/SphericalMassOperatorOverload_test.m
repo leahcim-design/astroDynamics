@@ -46,16 +46,16 @@ classdef SphericalMassOperatorOverload_test < sltest.TestCase
             massSphere3 = massSphere + delta * s;
             massSphere4 = delta * s + massSphere;
 
-            verifyProperties(testCase, massSphere1, expPosX, expPosY, expVelX, expVelY, mass, density);
-            verifyProperties(testCase, massSphere2, expPosX, expPosY, expVelX, expVelY, mass, density);
-            verifyProperties(testCase, massSphere3, expPosX, expPosY, expVelX, expVelY, mass, density);
-            verifyProperties(testCase, massSphere4, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere1, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere2, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere3, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere4, expPosX, expPosY, expVelX, expVelY, mass, density);
         end
 
     end
 
     methods (Access = private)
-        function verifyProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, expMass, expDensity)
+        function verifySphericalMassProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, expMass, expDensity)
             checkPosX = (abs(massSphere.posX - expPosX) <= testCase.tolerance);
             checkPosY = (abs(massSphere.posY - expPosY) <= testCase.tolerance);
             checkVelX = (abs(massSphere.velX - expVelX) <= testCase.tolerance);

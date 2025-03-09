@@ -21,7 +21,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < sltest.TestCase
 
             massSphere = SphericalMass();
             
-            testCase.checkBasicProperties(massSphere, expPosX, expPosY, expVelX, ...
+            testCase.verifySphericalMassProperties(massSphere, expPosX, expPosY, expVelX, ...
                 expVelY, expMass, expDensity);
         end
 
@@ -36,7 +36,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < sltest.TestCase
 
             massSphere = SphericalMass(expPosX, expPosY);
             
-            testCase.checkBasicProperties(massSphere, expPosX, expPosY, expVelX, ...
+            testCase.verifySphericalMassProperties(massSphere, expPosX, expPosY, expVelX, ...
                 expVelY, expMass, expDensity);
         end
 
@@ -51,7 +51,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < sltest.TestCase
 
             massSphere = SphericalMass(expPosX, expPosY, expVelX, expVelY);
             
-            testCase.checkBasicProperties(massSphere, expPosX, expPosY, expVelX, ...
+            testCase.verifySphericalMassProperties(massSphere, expPosX, expPosY, expVelX, ...
                 expVelY, expMass, expDensity);
         end
 
@@ -67,7 +67,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < sltest.TestCase
             massSphere = SphericalMass(expPosX, expPosY, expVelX, expVelY, ...
                 expMass, expDensity);
             
-            testCase.checkBasicProperties(massSphere, expPosX, expPosY, expVelX, ...
+            testCase.verifySphericalMassProperties(massSphere, expPosX, expPosY, expVelX, ...
                 expVelY, expMass, expDensity);
         end
 
@@ -211,7 +211,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMass_test < sltest.TestCase
     end
 
     methods (Access = private)
-        function checkBasicProperties(testCase, massIn, expPosX, expPosY, expVelX, ...
+        function verifySphericalMassProperties(testCase, massIn, expPosX, expPosY, expVelX, ...
                 expVelY, expMass, expDensity)
 
             checkPosX = (abs(expPosX - massIn.posX) <= eps);

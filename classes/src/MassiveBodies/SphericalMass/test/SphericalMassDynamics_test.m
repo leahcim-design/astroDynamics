@@ -33,7 +33,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMassDynamics_test < sltest.Tes
             massSphere = SphericalMass(iniPosX, iniPosY, iniVelX, iniVelY, mass, density);
             massSphere = massSphere + massSphere.calculateDeltaTself(dT);
             
-            verifyProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, mass, density);
         end
 
         function checkCalculateDeltaTselfFiniteVelocity(testCase)
@@ -63,7 +63,7 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMassDynamics_test < sltest.Tes
             massSphere = SphericalMass(iniPosX, iniPosY, iniVelX, iniVelY, mass, density);
             massSphere = massSphere + massSphere.calculateDeltaTself(dT);
             
-            verifyProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, mass, density);
         end
 
         function checkDynamicCentralMassAction(testCase)
@@ -99,13 +99,13 @@ classdef (TestTags = {'MatlabUnitTest'}) SphericalMassDynamics_test < sltest.Tes
                 massSphere.calculateDeltaTself(dT) + ...
                 massSphere.calculateDeltaTfromForceSource(massCentral, dT);
             
-            verifyProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, mass, density);
+            verifySphericalMassProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, mass, density);
         end
 
     end
 
     methods (Access = private)
-        function verifyProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, expMass, expDensity)
+        function verifySphericalMassProperties(testCase, massSphere, expPosX, expPosY, expVelX, expVelY, expMass, expDensity)
             checkPosX = (abs(massSphere.posX - expPosX) <= testCase.tolerance);
             checkPosY = (abs(massSphere.posY - expPosY) <= testCase.tolerance);
             checkVelX = (abs(massSphere.velX - expVelX) <= testCase.tolerance);
