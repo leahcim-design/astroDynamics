@@ -10,7 +10,7 @@ name = "sunJupiterGallileanMoons_oneYear";
 gravSI = 6.6743*10^-11; %gravitational constant
 
 %time-step dT and end-time of the simulation
-dT = 1 * 60 * 60 / 10; 
+dT = 1 * 60 * 60 / 20; 
 startTime = 0;
 endTime = 1 * 365 * 24 * 60 * 60 ;
 
@@ -66,7 +66,7 @@ iniVelXeuropa = 0;
 iniVelYeuropa = iniVelYjupiter + 13740;
 massEuropa = 4.8 * 10^22 * gravSI;
 densityEuropa = 3.01 * 10^3 * gravSI;
-massSphereEuropa = SphericalMass(iniPosXganymede, iniPosYganymede, iniVelXganymede, iniVelYganymede, massGanymede, densityGanymede);
+massSphereEuropa = SphericalMass(iniPosXeuropa, iniPosYeuropa, iniVelXeuropa, iniVelYeuropa, massEuropa, densityEuropa);
 
 %initialize the universe at time t=0
 initialUniverse = Universe(massSphereSun, massSphereJupiter, massSphereIo, ...
@@ -84,7 +84,7 @@ proj = currentProject;
 saveas(fig, fullfile(proj.RootFolder,"simulations","simulationResults",strcat(name,".fig")));
 saveas(fig, fullfile(proj.RootFolder,"simulations","simulationResults",strcat(name,".png")));
 
-xlim([iniPosXjupiter - 4*10^9, iniPosXjupiter + 2*10^9]);
-ylim([0, 0.3 * iniPosXjupiter]);
+xlim([8.26 * 10^11, 8.34 * 10^11]);
+ylim([0, 2.5 * 10^10]);
 saveas(fig, fullfile(proj.RootFolder,"simulations","simulationResults",strcat(name,"_zoom.png")));
 close all;
