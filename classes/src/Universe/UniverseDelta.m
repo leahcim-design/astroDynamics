@@ -17,7 +17,7 @@ classdef UniverseDelta
         function obj = addDelta(obj, newDelta)
             arguments
                 obj (1,1)
-                newDelta (1,1) 
+                newDelta (1,1) MassiveBodyDeltaInterface
             end
             obj.deltaMassiveBodies{end+1} = newDelta;
         end

@@ -26,6 +26,9 @@ This class inherits from the MassiveBodyDeltaInterface. It is the container for 
 ### Universe
 The Universe class is a container for multiple MassiveBody classes. It also provides a runge-kutta-4 time propagator and a plotting method. 
 
+### UniverseDelta
+This class serves as a container for changes of the dynamical properties of all massive bodies in the corrseponding Universe. 
+
 ### UniverseSimulation
 The UniverseSimulation class can time-propagate a Universe-instance and hold the generated time-slices in memory. It also provides different plotting methods, for example to plot the orbital curves of its massive bodies. 
 
@@ -33,9 +36,9 @@ The UniverseSimulation class can time-propagate a Universe-instance and hold the
 This project contains a pipeline for GitHub in the folder .github/workflows. As there is no direct Matlab support on GitLab it was decided to mirror the project into a public repository in GitHub to use its Matlab-support. The pipeline.runs can be found here: https://github.com/leahcim-design/astroDynamics/actions/workflows/matlab-pipeline.yml .
 
 The pipeline runs all Matlab-tests. All files that bear the "test" label count as test for the pipeline. The results of the test-stage are published as artifacts. For convenience the result of the latest run are checked into this repository in the folder "artifactsFromGithub".
-Additionally the pipeline has a simulation stage that can execute simulations and publish the generated outputs as artifacts. For convenience the results of the latest runf are checked into this repo in the "simulations/sinulationResults" folder. 
+Additionally the pipeline has a simulation stage that can execute simulations and publish the generated outputs as artifacts. For convenience the results of the latest runf are checked into this repo in the "simulations/simulationResults" folder. 
 
 ## simulations
-This project includes simulations of celestial bodis of our solar system. 
+This project includes simulations of celestial bodis of our solar system. The results of the simulations can be found in the folder "simulations/simulationResults". 
 - sunEarthMoonSimulation: this is a simulation of the Sun, Earth and the earth Moon over the course of one earth-year
 - sunEarthJupiterGallileanMoonsSimulation: this is a simulation of the Sun, Earth, Jupiter and the Gallilean moons Io, Ganymede, Kallisto and Europa over the course of one earth-year
