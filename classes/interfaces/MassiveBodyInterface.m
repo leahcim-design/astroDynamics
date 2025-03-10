@@ -65,10 +65,6 @@ classdef (Abstract) MassiveBodyInterface
         %applied for a time dT using the forwardEuler method
         [deltaT] = calculateDeltaTfromForceSource(obj, massivBodyFieldSource, dT)
         
-        %returns an empty instance of the MassiveBodyDelta class used for
-        %the change of the dynamic properties
-        [deltaT] = getZeroDelta(obj)
-        
         %the plus operators must be implemented for the object
         %with its corresponding Delta-class (i.e. data-container for 
         % dynamical property changes) and return an object of the

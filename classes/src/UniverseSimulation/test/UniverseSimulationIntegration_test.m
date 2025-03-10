@@ -43,7 +43,7 @@ classdef UniverseSimulationIntegration_test < matlab.unittest.TestCase
             iniPosX2 = (-1) * r / 3;
             iniPosY2 = 0;
             iniVelX2 = 0;
-            iniVelY2 = (-1) * sqrt( dummyMass.G * mass1^2 / (r * (mass1 + mass2)) );;
+            iniVelY2 = (-1) * sqrt( dummyMass.G * mass1^2 / (r * (mass1 + mass2)) );
             massSphere2 = SphericalMass(iniPosX2, iniPosY2, iniVelX2, iniVelY2, mass2, density);
 
             %expected radii of the curves

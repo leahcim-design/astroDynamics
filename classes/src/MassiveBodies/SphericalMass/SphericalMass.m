@@ -172,11 +172,6 @@ classdef SphericalMass < MassiveBodyInterface
                 dT * forceDensity(2));
         end
 
-        function [deltaT] = getZeroDelta(obj)
-            %GETZERODELTA returns an empty SphericalMassDelta
-            deltaT = SphericalMassDelta(0,0,0,0);
-        end
-
         function plot(obj)
             %PLOT plots the sphere into the current plot
             ang=[0:0.2:2*pi, 0]; 
