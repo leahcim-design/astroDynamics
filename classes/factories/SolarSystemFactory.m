@@ -1,6 +1,13 @@
 classdef SolarSystemFactory
     %SOLARSYSTEMFACTORY factory for celestial bodies of the solar system
-    
+    % the initial positions and velocities are consistent with their
+    % relative positions and velocities in the solar system. This means all
+    % all celestial bodies created with this factory can be directly used
+    % in a simulation
+    % note that the gravitational constant is set to 1! hence the mass-unit
+    % must be adjusted when setting the simulation-parameters
+    % all other parameters use SI-units!
+
     properties (Constant)
         %Sun
         posXsun = 0;
@@ -88,7 +95,7 @@ classdef SolarSystemFactory
         end
 
         function massSphere = createJupiter(obj)
-            %CREATEJupiter creates a SphericalMass with data of Jupiter
+            %CREATEJUPITER creates a SphericalMass with data of Jupiter
             massSphere = SphericalMass(obj.posXjupiter, obj.posYjupiter, obj.velXjupiter, obj.velYjupiter, obj.massJupiter, obj.densityJupiter);
         end
 

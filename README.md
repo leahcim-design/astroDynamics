@@ -35,6 +35,9 @@ This class serves as a container for changes of the dynamical properties of all 
 ### UniverseSimulation
 The UniverseSimulation class can time-propagate a Universe-instance and hold the generated time-slices in memory. It also provides different plotting methods, for example to plot the orbital curves of its massive bodies. 
 
+### SolarSystemFactory
+This is a factory that can create various celestial bodies of the solar system. The created MassiveBodies can be directly used for a simulation of the solar system. Currently it can create the following celestial bodies: Sun, Earth, Moon, Jupiter, Io, Ganymede, Kallisto and Europa. 
+
 ## CI/CD
 This project contains a pipeline-definition for GitHub in the folder *.github/workflows*. As there is no direct Matlab support on GitLab it was decided to mirror the project into a public repository in GitHub to use its Matlab-support. The pipeline runs can be found here: https://github.com/leahcim-design/astroDynamics/actions/workflows/matlab-pipeline.yml .
 
