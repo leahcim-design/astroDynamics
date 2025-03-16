@@ -36,7 +36,7 @@ proj = currentProject;
 saveas(fig, fullfile(proj.RootFolder,"simulations","simulationResults",strcat(name,".fig")));
 saveas(fig, fullfile(proj.RootFolder,"simulations","simulationResults",strcat(name,".png")));
 
-xlim([8.26 * 10^11, 8.34 * 10^11]);
-ylim([0, 2.5 * 10^10]);
+xlim([6.18 * 10^11, 6.34 * 10^11]);
+ylim([3.77 * 10^11, 3.93 * 10^11]);
 saveas(fig, fullfile(proj.RootFolder,"simulations","simulationResults",strcat(name,"_zoom.png")));
 close all;

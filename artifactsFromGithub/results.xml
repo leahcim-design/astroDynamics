@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="SphericalMassDynamics_test" skipped="0" tests="3" time="1.5252">
-    <testcase classname="SphericalMassDynamics_test" name="checkCalculateDeltaTselfZeroVelocity" time="1.476"/>
-    <testcase classname="SphericalMassDynamics_test" name="checkCalculateDeltaTselfFiniteVelocity" time="0.007162"/>
-    <testcase classname="SphericalMassDynamics_test" name="checkDynamicCentralMassAction" time="0.04206"/>
+  <testsuite errors="0" failures="0" name="SphericalMassDynamics_test" skipped="0" tests="3" time="1.5334">
+    <testcase classname="SphericalMassDynamics_test" name="checkCalculateDeltaTselfZeroVelocity" time="1.4839"/>
+    <testcase classname="SphericalMassDynamics_test" name="checkCalculateDeltaTselfFiniteVelocity" time="0.007107"/>
+    <testcase classname="SphericalMassDynamics_test" name="checkDynamicCentralMassAction" time="0.042422"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="SphericalMassOperatorOverload_test" skipped="0" tests="1" time="0.025203">
-    <testcase classname="SphericalMassOperatorOverload_test" name="checkPlusOperatorOverload" time="0.025203"/>
+  <testsuite errors="0" failures="0" name="SphericalMassOperatorOverload_test" skipped="0" tests="1" time="0.025168">
+    <testcase classname="SphericalMassOperatorOverload_test" name="checkPlusOperatorOverload" time="0.025168"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="SphericalMass_test" skipped="0" tests="37" time="0.078152">
-    <testcase classname="SphericalMass_test" name="checkConstructor_0args" time="0.006573"/>
-    <testcase classname="SphericalMass_test" name="checkConstructor_2args" time="0.00289"/>
-    <testcase classname="SphericalMass_test" name="checkConstructor_4args" time="0.00266"/>
-    <testcase classname="SphericalMass_test" name="checkConstructor_6args" time="0.001218"/>
-    <testcase classname="SphericalMass_test" name="checkRadius" time="0.002525"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-7)" time="0.011965"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-5)" time="0.004265"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-3)" time="0.006629"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-1)" time="0.003005"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=1)" time="0.003887"/>
+  <testsuite errors="0" failures="0" name="SphericalMass_test" skipped="0" tests="37" time="0.073978">
+    <testcase classname="SphericalMass_test" name="checkConstructor_0args" time="0.006629"/>
+    <testcase classname="SphericalMass_test" name="checkConstructor_2args" time="0.002962"/>
+    <testcase classname="SphericalMass_test" name="checkConstructor_4args" time="0.002788"/>
+    <testcase classname="SphericalMass_test" name="checkConstructor_6args" time="0.001262"/>
+    <testcase classname="SphericalMass_test" name="checkRadius" time="0.002729"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-7)" time="0.005656"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-5)" time="0.004384"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-3)" time="0.006774"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=-1)" time="0.0031"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=1)" time="0.003956"/>
     <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=3)" time="0.000117"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=5)" time="0.000101"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=7)" time="0.000121"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-7)" time="0.0023"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-5)" time="0.001355"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-3)" time="0.001321"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-1)" time="0.001317"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=1)" time="0.003568"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=5)" time="0.000106"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionOutsideSphere(deltaPos=7)" time="9.7e-05"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-7)" time="0.002362"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-5)" time="0.001394"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-3)" time="0.001313"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=-1)" time="0.001362"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=1)" time="0.003655"/>
     <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=3)" time="0.000105"/>
     <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=5)" time="9.8e-05"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=7)" time="0.000101"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-7)" time="0.002938"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-5)" time="0.001935"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-3)" time="0.001355"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-1)" time="0.00136"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=1)" time="0.003563"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=3)" time="0.000566"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=5)" time="0.000107"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityYDirectionOutsideSphere(deltaPos=7)" time="9.4e-05"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-7)" time="0.003079"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-5)" time="0.002049"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-3)" time="0.00141"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=-1)" time="0.001436"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=1)" time="0.003674"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=3)" time="0.00059"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=5)" time="0.000105"/>
     <testcase classname="SphericalMass_test" name="checkForceDensityXdirectionInsideSphere(deltaPos=7)" time="9.9e-05"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-7)" time="0.002226"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-5)" time="0.00136"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-3)" time="0.001311"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-1)" time="0.001327"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=1)" time="0.003558"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=3)" time="0.000104"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=5)" time="0.000101"/>
-    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=7)" time="0.000121"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-7)" time="0.002394"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-5)" time="0.001422"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-3)" time="0.001341"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=-1)" time="0.001388"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=1)" time="0.00374"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=3)" time="0.000116"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=5)" time="9.8e-05"/>
+    <testcase classname="SphericalMass_test" name="checkForceDensitYdirectionInsideSphere(deltaPos=7)" time="9.4e-05"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="Universe_test" skipped="0" tests="4" time="0.10741">
-    <testcase classname="Universe_test" name="checkUniverseConstructor" time="0.01381"/>
-    <testcase classname="Universe_test" name="checkUniverseAddMassiveBody" time="0.005477"/>
-    <testcase classname="Universe_test" name="checkCalculateDeltaT" time="0.033972"/>
-    <testcase classname="Universe_test" name="checkTimePropagateUniverse" time="0.054152"/>
+  <testsuite errors="0" failures="0" name="Universe_test" skipped="0" tests="4" time="0.10893">
+    <testcase classname="Universe_test" name="checkUniverseConstructor" time="0.013939"/>
+    <testcase classname="Universe_test" name="checkUniverseAddMassiveBody" time="0.00583"/>
+    <testcase classname="Universe_test" name="checkCalculateDeltaT" time="0.035185"/>
+    <testcase classname="Universe_test" name="checkTimePropagateUniverse" time="0.053973"/>
   </testsuite>
-  <testsuite errors="0" failures="0" name="UniverseSimulationIntegration_test" skipped="0" tests="1" time="1.1835">
-    <testcase classname="UniverseSimulationIntegration_test" name="twoBodyCirculation" time="1.1835"/>
+  <testsuite errors="0" failures="0" name="UniverseSimulationIntegration_test" skipped="0" tests="1" time="1.2232">
+    <testcase classname="UniverseSimulationIntegration_test" name="twoBodyCirculation" time="1.2232"/>
   </testsuite>
 </testsuites>
