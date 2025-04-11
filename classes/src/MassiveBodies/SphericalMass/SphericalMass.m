@@ -1,12 +1,10 @@
-classdef SphericalMass < MassiveBodyInterface
-    %POINTMASS Summary of this class goes here
-    %   
+classdef SphericalMass < MassiveBodyInterface  
     
     properties (SetAccess = protected)
         posX double %center-of-mass x-coordinate
         posY double %center-of-mass y-coordinate
         velX double %center-of-mass x-velocity
-        velY double %center-of-mass y-coordinate
+        velY double %center-of-mass y-velocity
         mass double %total mass of the body
 
         density double %mass-density of the sphere -> determines the radius
@@ -18,7 +16,7 @@ classdef SphericalMass < MassiveBodyInterface
 
     methods
         function obj = SphericalMass(varargin)
-            %POINTMASS Construct an instance of this class
+            %SPHERICALMASS Construct an instance of this class
             %   depending in the number of passed arguments, different
             %   properties are set; all other properties are initialized 
             %   with default values 
@@ -58,8 +56,6 @@ classdef SphericalMass < MassiveBodyInterface
             end
         end
        
-        %setter for the mass; the exact implementation can vary depending
-        %whether the body hast internal structure
         function obj = setDensity(obj,newDensity)
             %SETDENSITY
             %   setter for the density; must be nonzero

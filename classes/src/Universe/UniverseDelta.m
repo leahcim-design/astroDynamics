@@ -1,5 +1,4 @@
 classdef UniverseDelta
-    %UNIVERSEDELTA Summary of this class goes here
     
     properties (SetAccess = private)
         deltaMassiveBodies
@@ -8,7 +7,6 @@ classdef UniverseDelta
     methods
         function obj = UniverseDelta(varargin)
             %UNIVERSEDELTA Construct an instance of this class
-            %   Detailed explanation goes here
             for ii = 1:numel(varargin)
                 obj.addDelta(varargin{ii});
             end

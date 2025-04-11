@@ -7,7 +7,7 @@ classdef SphericalMassDelta < MassiveBodyDeltaInterface
         deltaPosX double %center-of-mass x-coordinate change
         deltaPosY double %center-of-mass y-coordinate change
         deltaVelX double %center-of-mass x-velocity change
-        deltaVelY double %center-of-mass y-coordinate change
+        deltaVelY double %center-of-mass y-velocity change
     end
     
     methods
